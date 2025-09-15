@@ -32,11 +32,19 @@ function findLongestWord(arrayWords) {
     }
 
     else {
-        arrayWords.forEach( element => {
-            return Math.max(element.length)
-        });
-    }
+
+        let longestWord = '';
+
+        for (let word of arrayWords) {
+            if (word.length > longestWord.length) {
+                longestWord = word;
+            }
+        }
+        return longestWord
+    };
+   
 }
+
 
 
 
